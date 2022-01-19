@@ -1,8 +1,7 @@
 # 1.딕셔너리를 이용해서 평균 점수 구하기
 scores = {'국어': 95, '영어': 90, '수학': 80, '과학' : 50}
-values = list(scores.values())
 
-data1 = sum(values) / len(values)
+data1 = sum(scores.values()) / len(scores)
 
 # 2.셋을 이용해서 1~100까지 숫자 중에 공배수를 구함: 5와 3의 공배수 구하고, 합집합을 구하기
 comMulti5 = {i for i in range(0, 101) if i % 5 == 0}
