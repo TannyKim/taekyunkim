@@ -2,6 +2,7 @@ from flask import Flask, redirect
 import json
 import requests
 import pandas as pd
+from pandas import json_normalize
 
 
 app = Flask(__name__)
@@ -28,3 +29,8 @@ def FlaskData():
 
 with open("mydatas.json", "rb") as jsonFile:
     tempData = json.load(jsonFile)
+    
+df = json_normalize(tempData['data'])
+
+#디버깅용 변수 설정
+temp = 0
